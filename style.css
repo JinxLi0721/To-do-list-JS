@@ -1,0 +1,152 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: mediumslateblue;
+    font-family:'Times New Roman', Times, serif;
+    color: aliceblue;
+    min-height: 100vh;
+}
+
+header {
+    font-size: 1.5rem;
+}
+
+header,
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 20vh;
+}
+
+form input,
+form button {
+    padding: 0.5rem;
+    border-radius: 2rem;
+    margin: 0 0.4rem;
+    border: none;
+    font-size: 2rem;
+    background-color: white;
+}
+
+form button {
+    color: yellowgreen;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover{
+    background-color: yellowgreen;
+    color: white;
+}
+
+.fa-plus-circle {
+    margin: -5px;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    padding: 1rem;
+    background-color: navajowhite;
+    color: black;
+    border-radius: 1.5rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.5s;
+    font-size: 1.5rem;
+    align-items: center;
+
+}
+.todo li {
+    flex:1 ;
+}
+
+.trash-btn,
+.complete-btn {
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.complete-btn {
+    background-color:  rgb(255, 200, 0);;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1.75rem;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.trash-btn {
+    border-top-right-radius: 1.75rem;
+    border-bottom-right-radius: 1rem;
+    background: rgb(171, 171, 171);
+}
+
+.slide {
+    transform: translateX(10rem);
+    opacity: 0;
+}
+
+.fa-trash, 
+.fa-check-circle {
+    pointer-events: none;
+}
+
+select {
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select {
+    margin-left: 1rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+    border: none;
+}
+
+select {
+    height: 3.2rem;
+    width: 10rem;
+    color: rgb(113, 151, 37);
+    cursor: pointer;
+    padding:1rem;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background-color: yellowgreen;
+    top:0;
+    right:0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.select:hover::after {
+    background-color: white;
+    color: yellowgreen;
+
+
+}
+
